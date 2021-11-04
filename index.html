@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Previewer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/style.css"> 
+</head>
+<body>
+    
+    <main class="grid-template-area">
+        <header class="header">
+            <h1>Border Radius Previewer</h1>
+            <hr/>
+        </header>
+        <section class="border">
+            <div class="item-border1">
+                <div class="item-border2"> </div>
+            </div>
+        </section>
+        <section class="painel">
+            <div class="control-panel">
+                <h4>Painel de controle</h4>
+                <hr>
+                
+                <div class="item-border">
+                    <label for="redifinirAlturaLagura">Personaliza tamanho:</label>
+                    <input type="checkbox" id="redifinirAlturaLagura" onclick="hideShowElement(this,'divWidthHeigth')"> 
+                    <div id="divWidthHeigth">
+                        <label for="redifinirAlturaLagura">Largura:</label>
+                        <input type="number" min="0" max="450" id="redifinirAlturaLagura" value="450" onchange="resetWidth(this)" > 
+                        <label for="redifinirAlturaLagura">px  / </label>
+                        <label for="redifinirAlturaLagura">Altura:</label>
+                        <input type="number" min="0" max="450" id="redifinirAlturaLagura" value="450" onchange="resetHeight(this)">  
+                        <label for="redifinirAlturaLagura">px</label>
+                     </div>
+                </div>
+                <div class="item-border">
+                    <label for="CorFundoBorda">Cor de fundo:</label>
+                    <input type="checkbox" id="CorFundoBorda" onclick="hideShowElement(this,'divColor')"> 
+                    <div id="divColor">
+                        <label for="firstColor">Primeira:</label>
+                        <input type="color" id="firstColor" name="firstColor" value="#360033" onchange="resetColor()">
+                        <label for="secondColor">Segunda:</label>
+                        <input type="color" id="secondColor" name="secondColor" value="#0b8793" onchange="resetColor()"> 
+                        <label for="thirdColor">Terceira:</label>
+                        <input type="color" id="thirdColor" name="thirdColor" value="#83b626" onchange="resetColor()">   
+                     </div>
+                </div>
+                
+                <div class="item-border">
+                    <label for="visualizarPontos">Controla 8 pontos </label>
+                    <input type="checkbox" id="visualizarPontos" onclick="hideShowElement(this,'pontsSecondary')">   
+                 <section id="sectionPontsPrimary">
+                    <div class="item-inline ">
+                        <label for="firstScore" class="form-label">P1 : </label>
+                        <div class="range item-width">
+                          <input type="range" class="form-range"  min="0" max="100" id="firstScore" >
+                        </div>
+                    </div> 
+                    <div class="item-inline pontsSecondary">
+                        <label for="fifthScore" class="form-label">P5 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="fifthScore">
+                        </div> 
+                    </div> 
+                    <div class="item-inline">
+                        <label for="secondScore" class="form-label">P2 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="secondScore" >
+                        </div> 
+                    </div> 
+                    <div class="item-inline pontsSecondary" >
+                        <label for="sixthScore" class="form-label">P6 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="sixthScore">
+                        </div> 
+                    </div> 
+                    
+                    <div class="item-inline">
+                        <label for="thirdScore" class="form-label">P3 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="thirdScore" >
+                        </div> 
+                    </div>  
+                    <div class="item-inline pontsSecondary">
+                        <label for="seventhScore" class="form-label">P7 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="seventhScore">
+                        </div> 
+                    </div> 
+                    <div class="item-inline">
+                        <label for="fourScore" class="form-label">P4 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="fourScore" > 
+                        </div>
+                    </div> 
+                    <div class="item-inline pontsSecondary">
+                        <label for="eighthScore" class="form-label">P8 : </label>
+                        <div class="range item-width">
+                            <input type="range" class="form-range" min="0" max="100" id="eighthScore">
+                        </div> 
+                    </div>  
+                 </section> 
+                </div> 
+                
+                 
+
+                <div class="item-border">
+                    <label for="viewPointsBorderRadius" class="">Fronteira de pontos:</label>
+                    <p id="viewPointsBorderRadius"> </p>
+                </div>  
+            </div>
+        </section>
+    </main>
+
+    <script src="JS/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>  
+    <script src="JS/main.js"></script> 
+
+</body>
+</html>
